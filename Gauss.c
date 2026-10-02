@@ -17,10 +17,13 @@ int main(int argc, char *argv[])
     }
 
     fscanf(f, "%d", &n);
-    
+
     double **M = malloc(n * sizeof(double *));
     for (int i = 0; i < n; i++)
         M[i] = malloc((n + 1) * sizeof(double));
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j <= n; j++)
+            fscanf(f, "%lf", &M[i][j]); 
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j <= n; j++)

@@ -53,3 +53,9 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+*.claude
+
+# Binário do projeto e saídas geradas em runtime
+/Gauss
+output/*.txt

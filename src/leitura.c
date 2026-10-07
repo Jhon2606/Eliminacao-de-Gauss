@@ -1,41 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-double **ler_sistema(const char *nome, int *n);
-void liberar(double **M, int n);
-
-int main(int argc, char *argv[])
-{
-    if (argc != 2)
-    {
-        fprintf(stderr, "Uso: %s <arquivo_de_entrada>\n", argv[0]);
-        return 1;
-    }
-
-    int n;
-    double **M = ler_sistema(argv[1], &n);
-    if (M == NULL)
-        return 1;
-    double *X = malloc(n * sizeof(double)); // vetor solução
-
-    // TESTE TEMPORÁRIO
-    printf("N = %d\n", n);
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j <= n; j++)
-        {
-            if (j == n)
-                printf("| "); // separa o B
-            printf("%8.3f ", M[i][j]);
-        }
-        printf("\n");
-    }
-    // ===================
-
-    free(X);
-    liberar(M, n);
-    return 0;
-}
+#include "leitura.h"
 
 double **ler_sistema(const char *nome, int *n)
 {

@@ -1,11 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/stat.h>
+#ifdef _WIN32
+#include <direct.h>
+#endif
 #include "leitura.h"
 #include "eliminacao.h"
 #include "substituicao.h"
 
 int main(int argc, char *argv[])
 {
+#ifdef _WIN32
+    _mkdir("output");
+#else
+    mkdir("output", 0755);
+#endif
     if (argc != 2)
     {
         fprintf(stderr, "Uso: %s <arquivo_de_entrada>\n", argv[0]);

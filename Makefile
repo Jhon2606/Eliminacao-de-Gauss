@@ -2,18 +2,18 @@
 # Descomente APENAS o bloco do seu sistema operacional abaixo
 
 # ---------------- macOS ----------------
-CC = clang
-CFLAGS = -Wall -Wextra -Iinclude
-LDFLAGS = -lm
-TARGET = Gauss
-CLEAN = rm -f $(TARGET) output/*.txt
+#CC = clang
+#CFLAGS = -Wall -Wextra -Iinclude
+#LDFLAGS = -lm
+#TARGET = Gauss
+#CLEAN = rm -f $(TARGET) output/*.txt
 
 # ---------------- Linux ----------------
-# CC = gcc
-# CFLAGS = -Wall -Wextra -Iinclude
-# LDFLAGS = -lm
-# TARGET = Gauss
-# CLEAN = rm -f $(TARGET) output/*.txt
+ CC = gcc
+ CFLAGS = -Wall -Wextra -Iinclude
+ LDFLAGS = -lm
+ TARGET = Gauss
+ CLEAN = rm -f $(TARGET) output/*.txt
 
 # ---------------- Windows (MinGW) ----------------
 # CC = gcc
